@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一对一发送全部发送</title>
+</head>
+
+<body>
+<div id="app"></div>
+<script>
+    ws = new WebSocket("ws://122.114.192.168:55555");
+    ws.onopen = function(e)
+    {
+        // ws.send('{"ce":"add_group"}');
+        ws.send("1111333");
+    };
+    ws.onmessage = function(e){
+        console.log(e.data);
+    }
+</script>
+</body>
+
+</html>
